@@ -1,4 +1,5 @@
 import { CardsList } from '@/components/dashboard/CardsList';
+import { ExpenseStatistics } from '@/components/dashboard/ExpenseStatistics';
 import { RecentTransactions } from '@/components/dashboard/RecentTransactions';
 import { WeeklyActivity } from '@/components/dashboard/WeeklyActivity';
 
@@ -15,6 +16,9 @@ export default function DashboardPage() {
           </div>
           <div className="flex flex-col lg:col-span-8">
             <WeeklyActivity />
+          </div>
+          <div className="flex flex-col lg:col-span-4">
+            <ExpenseStatistics />
           </div>
         </div>
       </div>

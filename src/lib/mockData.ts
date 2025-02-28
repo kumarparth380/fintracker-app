@@ -423,3 +423,10 @@ export const transactionData = [
     platform: 'other',
   },
 ];
+
+export const expenseCategories = [
+  'entertainment',
+  'investment',
+  'billExpenses',
+  'others',
+];
