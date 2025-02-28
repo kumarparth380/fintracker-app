@@ -4,6 +4,9 @@ import { Card } from '@/types/card';
 import { Link } from 'react-router';
 import { fetchCardData } from '@/api/card';
 
+import ChipLightIcon from '@/assets/svgs/chip-light.svg';
+import ChipDarkIcon from '@/assets/svgs/chip-dark.svg';
+
 export function CardsList() {
   const [data, setData] = useState<Card[] | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -69,7 +72,7 @@ export function CardsList() {
           <img
             width={35}
             height={35}
-            src={`/svgs/chip-${isDark ? 'light' : 'dark'}.svg`}
+            src={isDark ? ChipLightIcon : ChipDarkIcon}
             alt="chip-picture"
           />
         </div>
@@ -108,7 +111,7 @@ export function CardsList() {
             <img
               width={44}
               height={30}
-              src={`/svgs/card-ring-${isDark ? 'light' : 'dark'}.svg`}
+              src={isDark ? ChipLightIcon : ChipDarkIcon}
               alt="rings"
             />
           </div>
