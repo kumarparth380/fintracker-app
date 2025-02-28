@@ -13,30 +13,11 @@ import { PenSquare } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 import { ImageUploadModal } from './ImageUploadModal';
-
-const validateEmail = (email: string): string | null => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!email) return 'Email is required';
-  if (!emailRegex.test(email)) return 'Invalid email format';
-  return null;
-};
-
-const validatePassword = (password: string): string | null => {
-  if (!password) return 'Password is required';
-  if (password.length < 8) return 'Password must be at least 8 characters';
-  if (!/[A-Z]/.test(password))
-    return 'Password must contain an uppercase letter';
-  if (!/[a-z]/.test(password))
-    return 'Password must contain a lowercase letter';
-  if (!/[0-9]/.test(password)) return 'Password must contain a number';
-  return null;
-};
-
-const validateField = (value: string): string | null => {
-  if (!value) return 'This field is required';
-  if (value.length < 3) return 'Must be at least 3 characters long';
-  return null;
-};
+import {
+  validateEmail,
+  validateField,
+  validatePassword,
+} from '@/utils/validations';
 
 type FormField = {
   label: string;
@@ -195,7 +176,9 @@ export function EditProfile() {
           <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2 md:gap-y-6">
             {formFields.map((field) => (
               <div key={field.name} className="col-span-1">
-                <label className="mb-2 block text-sm text-[#1A1D1F]">
+                <label
+                  htmlFor={field.name}
+                  className="mb-2 block text-sm text-[#1A1D1F]">
                   {field.label}
                 </label>
                 {field.type === 'select' ? (
@@ -237,6 +220,7 @@ export function EditProfile() {
 
       <div className="mt-8 flex justify-end md:mt-12">
         <Button
+          aria-label="submit"
           className="h-11 w-full rounded-xl bg-[#1A1D1F] px-8 text-white hover:bg-[#1A1D1F]/90 md:w-auto"
           onClick={handleSubmit}>
           Save
