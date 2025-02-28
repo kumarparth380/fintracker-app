@@ -27,7 +27,7 @@ export default function CardsPage() {
       <h1 className="mb-6 sm:mb-8 text-2xl sm:text-3xl font-bold text-gray-800">
         My Cards
       </h1>
-      <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
         {cards?.map((card) => (
           <div
             key={card.number}
