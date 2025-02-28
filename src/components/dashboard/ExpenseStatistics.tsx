@@ -1,5 +1,3 @@
-'use client';
-
 import { SpinnerContainer } from '@/components/ui/spinnerContainer';
 import { useFetchExpenseStats } from '@/hooks/useFetchExpenseStats';
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
