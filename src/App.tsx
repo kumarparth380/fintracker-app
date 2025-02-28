@@ -1,15 +1,14 @@
 import './App.css';
-import { Sidebar } from '@/components/Sidebar';
 import AppRoutes from './Routes';
 import { BrowserRouter } from 'react-router';
+import Layout from './Layout';
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Sidebar />
+      <Layout>
         <AppRoutes />
-      </div>
+      </Layout>
     </BrowserRouter>
   );
 }

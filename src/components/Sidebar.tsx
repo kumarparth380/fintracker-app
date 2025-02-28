@@ -17,16 +17,15 @@ import Logo from '@/assets/svgs/logo.svg';
 
 export const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = window.location.pathname;
+  const pathname = useLocation().pathname;
 
-  console.log({ pathname, window });
   const MenuItem: React.FC<{ item: (typeof menuItems)[0] }> = ({ item }) => (
     <Link
       to={item.href}
       className={`relative flex items-center gap-3 rounded-xl px-8 py-3 text-[15px] font-medium transition-colors ${
         pathname === item.href
           ? 'text-[#232323] before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:rounded-r before:bg-black'
-          : 'text-[#b1b1b1] hover:bg-[#F4F4F4] hover:text-[#232323]'
+          : 'text-[#b1b1b1] hover:bg-[#F4F4F4] hover:text-neutral-800'
       }`}>
       <img
         src={item.icon}
@@ -85,7 +84,7 @@ export const Sidebar = () => {
         </SheetContent>
       </Sheet>
 
-      <div className="fixed hidden h-screen w-[280px] flex-col border-r border-[#F4F4F4] bg-white py-6 lg:flex">
+      <div className="fixed hidden h-screen w-[280px] flex-col border-r border-zinc-100 bg-white py-6 lg:flex">
         <SidebarContent />
       </div>
     </>
