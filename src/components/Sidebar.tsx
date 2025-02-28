@@ -12,10 +12,14 @@ import {
 } from '@/components/ui/sheet';
 import { menuItems } from '@/constants/navigation';
 
+import menuIcon from '@/assets/svgs/menu.svg';
+import Logo from '@/assets/svgs/logo.svg';
+
 export const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = window.location.pathname;
 
+  console.log({ pathname, window });
   const MenuItem: React.FC<{ item: (typeof menuItems)[0] }> = ({ item }) => (
     <Link
       to={item.href}
@@ -25,7 +29,7 @@ export const Sidebar = () => {
           : 'text-[#b1b1b1] hover:bg-[#F4F4F4] hover:text-[#232323]'
       }`}>
       <img
-        src={`/svgs/${item.icon}`}
+        src={item.icon}
         alt={`${item.label} Icon`}
         width={20}
         height={20}
@@ -39,7 +43,7 @@ export const Sidebar = () => {
     <>
       <div className="hidden md:flex  mb-8 items-center gap-3 px-6">
         <div className="flex h-8 w-8 items-center justify-center rounded-lg">
-          <img src="/svgs/logo.svg" alt="Logo Icon" width={20} height={20} />
+          <img src={Logo} alt="Logo Icon" width={20} height={20} />
         </div>
         <span className="text-xl font-bold text-[#1A1D1F]">Soar Task</span>
       </div>
@@ -56,7 +60,7 @@ export const Sidebar = () => {
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild className="fixed left-4 top-4 z-50 lg:hidden">
           <Button variant="ghost" size="icon">
-            <img src="/svgs/menu.svg" alt="Menu Icon" width={24} height={24} />
+            <img src={menuIcon} alt="Menu Icon" width={24} height={24} />
           </Button>
         </SheetTrigger>
         <SheetContent side="left" className="w-[300px] p-0 sm:w-[300px]">
