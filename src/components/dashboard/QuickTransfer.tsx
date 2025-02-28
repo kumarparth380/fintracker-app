@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { SpinnerContainer } from '@/components/ui/spinnerContainer';
 import { motion } from 'framer-motion';
 import { Send } from 'lucide-react';
 import { useFetchQuickTransfer } from '@/hooks/useFetchQuickTransfer';
+import { CardSkeleton } from '@/components/CardSkeleton';
 
 export function QuickTransfer() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { users, loading, error } = useFetchQuickTransfer();
 
   if (loading) {
-    return <SpinnerContainer />;
+    return <CardSkeleton />;
   }
 
   if (error) {

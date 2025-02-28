@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { SpinnerContainer } from '@/components/ui/spinnerContainer';
 
 import PaypalIcon from '@/assets/svgs/paypal.svg';
 import OtherIcon from '@/assets/svgs/other.svg';
 import TransactionCardIcon from '@/assets/svgs/transaction-card.svg';
 import { Transaction } from '@/types/transactions';
 import { fetchTransactionData } from '@/api/transactions';
+import { CardSkeleton } from '@/components/CardSkeleton';
 
 export function RecentTransactions() {
   const [data, setData] = useState<Transaction[] | null>(null);
@@ -34,7 +34,7 @@ export function RecentTransactions() {
   }, []);
 
   if (loading) {
-    return <SpinnerContainer />;
+    return <CardSkeleton />;
   }
 
   if (error) {

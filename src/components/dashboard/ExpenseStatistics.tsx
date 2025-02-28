@@ -1,4 +1,4 @@
-import { SpinnerContainer } from '@/components/ui/spinnerContainer';
+import { CardSkeleton } from '@/components/CardSkeleton';
 import { useFetchExpenseStats } from '@/hooks/useFetchExpenseStats';
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
 
@@ -66,7 +66,7 @@ export function ExpenseStatistics() {
   const { loading, rawStats, error } = useFetchExpenseStats();
 
   if (loading) {
-    return <SpinnerContainer />;
+    return <CardSkeleton />;
   }
 
   if (!rawStats) {

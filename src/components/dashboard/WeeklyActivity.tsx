@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { SpinnerContainer } from '@/components/ui/spinnerContainer';
+import { CardSkeleton } from '@/components/CardSkeleton';
 import {
   Bar,
   BarChart,
@@ -37,7 +37,7 @@ export function WeeklyActivity() {
   }, []);
 
   if (loading) {
-    return <SpinnerContainer />;
+    return <CardSkeleton />;
   }
 
   if (error) {

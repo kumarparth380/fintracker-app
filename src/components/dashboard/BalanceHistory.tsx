@@ -1,4 +1,3 @@
-import { SpinnerContainer } from '@/components/ui/spinnerContainer';
 import {
   Area,
   AreaChart,
@@ -8,12 +7,13 @@ import {
   YAxis,
 } from 'recharts';
 import { useFetchBalanceHistory } from '@/hooks/useFetchBalanceHistory';
+import { CardSkeleton } from '@/components/CardSkeleton';
 
 export function BalanceHistory() {
   const { data, loading, error } = useFetchBalanceHistory();
 
   if (loading) {
-    return <SpinnerContainer />;
+    return <CardSkeleton />;
   }
 
   if (error) {
