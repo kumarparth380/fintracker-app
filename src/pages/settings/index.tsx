@@ -1,6 +1,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import SettingsLayout from './layout';
 import { EditProfile } from '@/components/settings/EditProfile';
+import { Preferences } from '@/components/settings/Preferences';
+import { Security } from '@/components/settings/Security';
 
 export default function SettingsPage() {
   return (
@@ -25,6 +27,12 @@ export default function SettingsPage() {
         </TabsList>
         <TabsContent value="edit-profile">
           <EditProfile />
+        </TabsContent>
+        <TabsContent value="preferences">
+          <Preferences />
+        </TabsContent>
+        <TabsContent value="security">
+          <Security />
         </TabsContent>
       </Tabs>
     </SettingsLayout>

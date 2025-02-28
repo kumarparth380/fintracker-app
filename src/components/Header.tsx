@@ -11,7 +11,7 @@ export const Header = () => {
   const pathname = useLocation().pathname;
   const title =
     pathname === '/'
-      ? 'Dashboard'
+      ? 'Overview'
       : pathname.split('/')[1].charAt(0).toUpperCase() +
         pathname.split('/')[1].slice(1);
 
@@ -56,7 +56,7 @@ export const Header = () => {
 
       <div className="hidden border-b border-[#F4F4F4] bg-white px-8 py-4 lg:flex">
         <div className="flex w-full items-center justify-between">
-          <h1 className="text-[32px] font-semibold text-[#1A1D1F]">{title}</h1>
+          <h1 className="text-[28px] font-semibold text-[#1A1D1F]">{title}</h1>
           <div className="flex items-center gap-6">
             <SearchBar />
             <Button
