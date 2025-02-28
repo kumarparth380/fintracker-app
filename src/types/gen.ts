@@ -3,3 +3,8 @@ export type TransactionalUser = {
   role: string;
   image: string;
 };
+
+export type BalanceHistoryData = {
+  name: string;
+  value: number;
+}[];

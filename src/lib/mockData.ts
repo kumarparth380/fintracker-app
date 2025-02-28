@@ -574,3 +574,18 @@ export const usersData = [
     image: '/src/assets/images/profile-3.jpg',
   },
 ];
+
+export const monthNames = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
