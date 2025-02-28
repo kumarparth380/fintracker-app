@@ -430,3 +430,147 @@ export const expenseCategories = [
   'billExpenses',
   'others',
 ];
+
+export const usersData = [
+  {
+    name: 'Livia Bator',
+    role: 'CEO',
+    image: '/src/assets/images/profile-4.jpg',
+  },
+  {
+    name: 'Randy Press',
+    role: 'Director',
+    image: '/src/assets/images/profile-2.jpg',
+  },
+  {
+    name: 'Emily Stone',
+    role: 'Designer',
+    image: '/src/assets/images/profile-3.jpg',
+  },
+  {
+    name: 'James Bond',
+    role: 'Developer',
+    image: '/src/assets/images/profile-2.jpg',
+  },
+  {
+    name: 'Oliver Quick',
+    role: 'Manager',
+    image: '/src/assets/images/profile-4.jpg',
+  },
+  {
+    name: 'Sophia Turner',
+    role: 'HR',
+    image: '/src/assets/images/profile-3.jpg',
+  },
+  {
+    name: 'Ethan Hunt',
+    role: 'Accountant',
+    image: '/src/assets/images/profile-4.jpg',
+  },
+  {
+    name: 'Amelia Rose',
+    role: 'Marketing Lead',
+    image: '/src/assets/images/profile-2.jpg',
+  },
+  {
+    name: 'Noah Finch',
+    role: 'Product Manager',
+    image: '/src/assets/images/profile-3.jpg',
+  },
+  {
+    name: 'Ella Parker',
+    role: 'Sales Lead',
+    image: '/src/assets/images/profile-4.jpg',
+  },
+  {
+    name: 'Aiden Wolf',
+    role: 'Designer',
+    image: '/src/assets/images/profile-2.jpg',
+  },
+  {
+    name: 'Grace Lee',
+    role: 'Engineer',
+    image: '/src/assets/images/profile-3.jpg',
+  },
+  {
+    name: 'Lucas King',
+    role: 'CEO',
+    image: '/src/assets/images/profile-2.jpg',
+  },
+  { name: 'Mia Bell', role: 'CTO', image: '/src/assets/images/profile-4.jpg' },
+  {
+    name: 'Jack Miller',
+    role: 'Director',
+    image: '/src/assets/images/profile-3.jpg',
+  },
+  {
+    name: 'Olivia Scott',
+    role: 'Designer',
+    image: '/src/assets/images/profile-4.jpg',
+  },
+  {
+    name: 'Samuel Davis',
+    role: 'Support Lead',
+    image: '/src/assets/images/profile-3.jpg',
+  },
+  {
+    name: 'Zoe Adams',
+    role: 'Marketing',
+    image: '/src/assets/images/profile-2.jpg',
+  },
+  {
+    name: 'Benjamin Clark',
+    role: 'Developer',
+    image: '/src/assets/images/profile-4.jpg',
+  },
+  {
+    name: 'Chloe Walker',
+    role: 'HR',
+    image: '/src/assets/images/profile-3.jpg',
+  },
+  {
+    name: 'Daniel Johnson',
+    role: 'Sales',
+    image: '/src/assets/images/profile-2.jpg',
+  },
+  {
+    name: 'Isabella Wright',
+    role: 'Designer',
+    image: '/src/assets/images/profile-4.jpg',
+  },
+  {
+    name: 'Michael Carter',
+    role: 'Manager',
+    image: '/src/assets/images/profile-3.jpg',
+  },
+  {
+    name: 'Samuel Evans',
+    role: 'Product Lead',
+    image: '/src/assets/images/profile-2.jpg',
+  },
+  {
+    name: 'Harper Green',
+    role: 'Project Manager',
+    image: '/src/assets/images/profile-3.jpg',
+  },
+  {
+    name: 'Liam Harris',
+    role: 'Software Engineer',
+    image: '/src/assets/images/profile-4.jpg',
+  },
+  {
+    name: 'Charlotte Lewis',
+    role: 'Designer',
+    image: '/src/assets/images/profile-2.jpg',
+  },
+  {
+    name: 'Evan White',
+    role: 'Marketing',
+    image: '/src/assets/images/profile-4.jpg',
+  },
+  {
+    name: 'Ella Brown',
+    role: 'Developer',
+    image: '/src/assets/images/profile-3.jpg',
+  },
+];
