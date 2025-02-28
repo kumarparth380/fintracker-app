@@ -94,9 +94,12 @@ export function QuickTransfer() {
           </span>
           <div className="ml-[110px] flex flex-1 items-center justify-between rounded-xl bg-[#F4F4F4]">
             <span className="pl-4 text-[15px] text-[#1A1D1F]">525.50</span>
-            <button className="m-1 flex h-[44px] items-center gap-2 rounded-xl bg-[#1A1D1F] px-5 text-[15px] text-white transition-colors hover:bg-black/90">
+            <button
+              className="m-1 flex h-[44px] items-center gap-2 rounded-xl bg-[#1A1D1F] px-5 text-[15px] text-white transition-all duration-200 ease-in-out hover:bg-black/90 hover:scale-105 hover:shadow-lg"
+              aria-label="Send amount"
+              role="button">
               Send
-              <Send className="h-4 w-4 -rotate-45" />
+              <Send className="h-4 w-4" />
             </button>
           </div>
         </div>
