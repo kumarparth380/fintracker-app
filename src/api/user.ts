@@ -44,7 +44,7 @@ export const mockFileUpload = (file: File): Promise<UploadResponse> => {
           uploadedImageUrl,
         });
       };
-      reader.onerror = (error) => {
+      reader.onerror = () => {
         reject('Error reading file');
       };
 

@@ -28,8 +28,6 @@ const renderCustomizedLabel = ({
   midAngle,
   innerRadius,
   outerRadius,
-  percent,
-  index,
   name,
   value,
 }: any) => {
@@ -63,7 +61,7 @@ const renderCustomizedLabel = ({
 };
 
 export function ExpenseStatistics() {
-  const { loading, rawStats, error } = useFetchExpenseStats();
+  const { loading, rawStats } = useFetchExpenseStats();
 
   if (loading) {
     return <CardSkeleton />;
