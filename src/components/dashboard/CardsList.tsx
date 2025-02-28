@@ -17,7 +17,6 @@ export function CardsList() {
       try {
         setLoading(true);
         const response = await fetchCardData();
-        console.log({ response });
         setData(response);
         setError(null);
       } catch (err) {
