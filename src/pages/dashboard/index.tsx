@@ -1,3 +1,4 @@
+import { BalanceHistory } from '@/components/dashboard/BalanceHistory';
 import { CardsList } from '@/components/dashboard/CardsList';
 import { ExpenseStatistics } from '@/components/dashboard/ExpenseStatistics';
 import { QuickTransfer } from '@/components/dashboard/QuickTransfer';
@@ -23,6 +24,9 @@ export default function DashboardPage() {
           </div>
           <div className="flex flex-col lg:col-span-4">
             <QuickTransfer />
+          </div>
+          <div className="flex flex-col lg:col-span-8">
+            <BalanceHistory />
           </div>
         </div>
       </div>
