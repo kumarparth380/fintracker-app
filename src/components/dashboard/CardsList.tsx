@@ -1,16 +1,15 @@
-import { SpinnerContainer } from '@/components/ui/spinnerContainer';
-import { Card } from '@/types/card';
+import { Card, CardType } from '@/types/card';
 import { Link } from 'react-router';
 
-import ChipLightIcon from '@/assets/svgs/chip-light.svg';
-import ChipDarkIcon from '@/assets/svgs/chip-dark.svg';
 import { useFetchCards } from '@/hooks/useFetchCards';
+import { CardSkeleton } from '@/components/CardSkeleton';
+import CardItem from '@/components/Card';
 
 export function CardsList() {
   const { data, loading, error } = useFetchCards();
 
   if (loading) {
-    return <SpinnerContainer />;
+    return <CardSkeleton />;
   }
 
   if (error) {
@@ -21,78 +20,8 @@ export function CardsList() {
     return null;
   }
 
-  const renderCard = (card: Card, type = 'other') => {
-    const isDark = type === 'paypal';
-    return (
-      <div
-        key={card.number}
-        className={`h-full w-full overflow-hidden rounded-[20px] p-6 transition-all duration-200 ${
-          isDark
-            ? 'bg-gradient-to-b from-[#2C3A4E] to-[#1C2631] text-white'
-            : 'border border-[#E4E4E4] bg-white text-[#27364B]'
-        }`}>
-        <div className="mb-8 flex items-start justify-between">
-          <div>
-            <div
-              className={`text-sm font-medium ${
-                isDark ? 'text-white' : 'text-[#718ebf]'
-              }`}>
-              Balance
-            </div>
-            <div
-              className={`mt-1 text-2xl font-semibold ${isDark ? 'text-white' : 'text-[#343c6a]'}`}>
-              ${card.balance.toLocaleString()}
-            </div>
-          </div>
-          <img
-            width={35}
-            height={35}
-            src={isDark ? ChipLightIcon : ChipDarkIcon}
-            alt="chip-picture"
-          />
-        </div>
-        <div className="mb-6 flex justify-between">
-          <div>
-            <div
-              className={`text-xs font-medium ${
-                isDark ? 'text-white/60' : 'text-[#718ebf]'
-              }`}>
-              CARD HOLDER
-            </div>
-            <div
-              className={`${isDark ? 'text-white' : 'text-[#343c6a]'} mt-1 font-medium`}>
-              {card.name}
-            </div>
-          </div>
-          <div className="text-right">
-            <div
-              className={`text-xs font-medium ${
-                isDark ? 'text-white/60' : 'text-[#718ebf]'
-              }`}>
-              VALID THRU
-            </div>
-            <div
-              className={`${isDark ? 'text-white' : 'text-[#343c6a]'} mt-1 font-medium`}>
-              {card.validity}
-            </div>
-          </div>
-        </div>
-        <div className="flex items-center justify-between">
-          <div
-            className={`text-base font-medium tracking-[3px] ${isDark ? 'text-white' : 'text-[#343c6a]'}`}>
-            {card.number}
-          </div>
-          <div className="flex -space-x-2">
-            <img
-              width={44}
-              height={30}
-              src={isDark ? ChipLightIcon : ChipDarkIcon}
-              alt="rings"
-            />
-          </div>
-        </div>
-      </div>
-    );
+  const renderCard = (card: Card, type: CardType = 'other') => {
+    return <CardItem key={card.number} card={card} type={type} />;
   };
 
   return (
@@ -101,6 +30,7 @@ export function CardsList() {
         <h2 className="text-xl font-bold text-[#27364B]">My Cards</h2>
         <Link
           to="/cards"
+          aria-label="see-all"
           className="text-sm font-medium text-black hover:underline">
           See All
         </Link>
