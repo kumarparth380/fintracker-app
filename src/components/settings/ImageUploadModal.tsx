@@ -1,5 +1,3 @@
-'use client';
-
 import { mockFileUpload } from '@/api/user';
 import { Button } from '@/components/ui/button';
 import {
